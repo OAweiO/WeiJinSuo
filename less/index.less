@@ -1,0 +1,402 @@
+// 主题色
+@theme: #e92322;
+
+/*------------------------------------------header begin---------------------------------------*/
+
+  /*------------------ top-box begin------------------- */
+    #header .top-box{
+      border-bottom:1px solid #ccc; 
+    }
+    #header > .top-box > .container > div{
+      line-height: 40px;
+      font-size: 12px;
+      text-align: center;
+    } 
+    #header .mobile, #header .telephone, #header .question{
+      border-right: 1px solid #ccc;
+    }
+    #header .mobile .QRcode{
+      position: absolute;
+      z-index: 999;
+      left: 50%;
+      top: 40px;
+      display: none;
+      transform: translateX(-50%);
+    }
+    #header .mobile{
+      a{
+        display: block;
+
+        &:hover{
+          .QRcode{
+            display: block;
+          }
+        }
+      }
+    }
+    #header .btn-register{
+      background-color: @theme;
+    }
+    #header .btn-link{
+      color: #777;
+    } 
+    #header .btn-link:hover{
+      text-decoration: none;
+      color: @theme;
+    }
+    #header .top-box a{
+      color: #777;
+      text-decoration: none;
+    }
+    #header .top-box a:hover{
+      color: @theme;
+      text-decoration: none;
+    }
+  /*------------------ top-box end---------------------*/
+
+  /* -----------------nav begin---------------------- */
+    #navId{
+      @media (max-width: 640px) {
+        &{
+          position: fixed;
+          top: 0;
+        }
+      }
+      background-color: #fff;
+      margin-bottom: 0;
+      width: 100%;
+      z-index: 999;
+      border-radius: 0;
+      .navbar-header {
+        .navbar-toggle{
+          margin-top: 23px;
+        }
+      }  
+      .navbar-brand{
+        height: 80px;
+        line-height: 50px;
+        i::before{
+          font-size: 30px;
+        }
+        .icon-icon{
+          color: @theme;
+        }
+        .icon-logo{
+          color: #424242;
+        }
+      }
+      .navbar-collapse{
+        > .navbar-nav{
+          > li {
+            &.active{
+              > a{
+                background-color: #fff;
+                border-bottom: 2px solid @theme;
+              }
+            }
+            > a {
+              height: 80px;
+              line-height: 50px;
+                &:hover{
+                  border-bottom: 2px solid @theme;
+                }
+                @media (max-width: 767px) {
+                  &{
+                    height: 45px;
+                    line-height: 25px;
+                  }
+                }
+            }
+          }
+        }
+      }
+    } 
+  /* -----------------nav end----------------------- */
+
+/*------------------------------------------header end---------------------------------------*/  
+
+/* -----------------banner begin----------------- */
+  #slide{
+    @media (max-width: 640px) {
+      &{
+        margin-top: 82px;
+      }
+    }
+    .pcImg{
+      display: block;
+      height: 410px;
+      background-position: center;
+      background-size: auto 100%;
+    }
+  }
+/* -----------------banner end-------------------*/
+
+// ------------------ state说明 begin---------------
+  #state {
+    padding: 30px 0;
+    .media {
+      margin-top: 10px;
+      >a {
+          color: #666;
+          text-decoration: none;
+          &:hover {
+            color: @theme;
+          }
+      }
+    }
+  }
+// ------------------ state说明 end-----------------
+
+// booking立即预约 begin
+  #booking{
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+    .pull-left{
+        span{
+          color: @theme;
+        }
+      a{
+        color: @theme;
+      }
+    }
+  }
+// booking立即预约 end
+
+// product产品 begin
+  #product{
+    padding: 40px 0;
+    background-color: #f0f0f0;
+    .ul-wrapper{
+      overflow: hidden;
+      ul.nav{
+        width: 580px;
+        >li {
+          &.active{
+            a{
+              background-color: #f0f0f0;
+              border:none;
+              border-bottom: 3px solid @theme;
+            }
+          }
+          a{
+            font-size: 16px;
+            color: #000;
+            border:none;
+            &:hover{
+              background-color: #f0f0f0;
+              border-bottom: 3px solid @theme;
+            }
+          }
+        }
+      }
+    }
+
+    .tab-content{
+      .productbox{
+        &.active{
+          background-color: @theme;
+          color: #fff;
+          .right-percent{
+            border-color: #fff;
+          }
+          &::before{
+            content: "\e915";
+            font-family: 'itcast';
+            position: absolute;
+            left: 0;
+            top: -6px;
+            font-size: 30px;
+          }
+        }
+        position: relative;
+        margin-top: 20px;
+        background-color: #fff;
+        .left-price{
+          margin-right: 120px;
+          height: 160px;
+          padding: 10px;
+
+          h4{
+            text-align: center;
+          }
+          >.row {
+            >div {
+              text-align: left;
+              margin-top: 10px;
+              p{
+                margin-bottom: 0;
+              }
+            }
+            >div:nth-child(2n){
+              text-align: right;
+            }
+          }
+        }
+        .right-percent{
+          width: 120px;
+          position: absolute;
+          right: 0;
+          top: 0;
+          padding-top: 40px;
+          height: 160px;
+          border-left: 1px dashed #ccc;
+          text-align: center;
+          .tip-list{
+            width: 100%;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            i{
+              font-style: normal;
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              line-height: 20px;
+              &:first-of-type{
+                border: 1px solid @theme;
+                color: @theme;
+              }
+              &:last-of-type{
+                color: #0f0;
+                border: 1px solid #0f0;
+                margin-left: 5px;
+              }
+            }
+          }
+          p{
+            margin-bottom: 0;
+
+            strong{
+              font-size: 30px;
+            }
+          }
+          &::before,&::after{
+            content: '';
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            position: absolute;
+            background-color: #f0f0f0;
+            left: 0;
+          }
+          &::before{
+            top: 0;
+            transform: translate(-50%,-50%);
+          }
+          &::after{
+            bottom: 0;
+            transform: translate(-50%,50%);
+          }
+        }
+      }
+    }
+  }
+// product产品 end
+
+//news新闻 begin
+  #news{
+    padding: 40px 0;
+    .row{
+      >div {
+        >h4 {
+          border-bottom: 1px dashed #ccc;
+          line-height: 40px;
+          text-align: center;
+          position: relative;
+          &::after{
+            content: '';
+            border: 1px solid #ccc;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            position: absolute;
+            right: -10px;
+            bottom: -5px;
+          }
+        }
+        ul.nav-tabs{
+          border: none;
+          >li{
+            margin-bottom: 20px;
+            @media (max-width: 992px){
+              &{
+                width: 25%;
+                >a {
+                  margin:  0 auto;
+                }
+              }
+            }
+            &.active{
+              >a {
+                background-color: @theme;
+                color: #fff;
+              }
+            }
+            >a {
+              width: 60px;
+              height: 60px;
+              border: none;
+              border-radius: 50%;
+              color: #666;
+              text-align: center;
+              line-height: 40px;
+              font-size: 30px;
+            }
+          }
+        }
+        >.tab-content{
+          ul.news-list{
+            list-style: none;
+            @media (max-width:640px) {
+              padding: 0;
+            }
+            li{
+              padding-bottom: 15px;
+              a{
+                font-size: 14px;
+                text-decoration: none;
+                color: #666;
+                &:hover{
+                  color: @theme;
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+//news新闻 end
+
+//partner合作伙伴 begin 
+  #partner{
+    >.container{
+      >h3 {
+        text-align: center;
+      }
+      >ul {
+        list-style: none;
+        >li {
+          width: 11.11111%;
+          float: left;
+          text-align: center;
+          >a {
+            &:hover{
+              color: @theme;
+            }
+            color: #666;
+            text-decoration: none;
+            >i {
+              font-size: 60px;
+            }
+          }
+        }
+      }
+    }
+  }
+//partner合作伙伴 end
